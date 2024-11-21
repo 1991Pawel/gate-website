@@ -27,8 +27,12 @@ export async function BlogPostsSection() {
 									offer?.reservation ? style.imageWrapperActive : null,
 								)}
 							>
-								{firstImageUrl && (
-									<img src={firstImageUrl} alt={`${offer.title}`} className={style.offerImage} />
+								{offer?.images[0]?.url && (
+									<img
+										src={offer?.images[0].url}
+										alt={`${offer.title}`}
+										className={style.offerImage}
+									/>
 								)}
 								{offer?.reservation && <div className={style.reservation}>Rezerwacja</div>}
 							</div>
