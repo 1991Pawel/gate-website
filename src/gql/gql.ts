@@ -13,7 +13,7 @@ import { TypedDocumentNode as DocumentNode } from '@graphql-typed-document-node/
  * Therefore it is highly recommended to use the babel or swc plugin for production.
  */
 const documents = {
-    "query GetAllPosts {\n  gates {\n    title\n    price\n    width\n    height\n    reservation\n    images {\n      url\n    }\n  }\n}": types.GetAllPostsDocument,
+    "query GetAllPosts {\n  gates {\n    title\n    price\n    width\n    height\n    id\n    reservation\n    images {\n      url\n    }\n  }\n}\n\nquery GetPostBySlug($slug: ID!) {\n  gate(where: {id: $slug}) {\n    id\n    title\n    images {\n      id\n      url\n    }\n    description {\n      html\n    }\n  }\n}": types.GetAllPostsDocument,
 };
 
 /**
@@ -33,7 +33,7 @@ export function gql(source: string): unknown;
 /**
  * The gql function is used to parse GraphQL queries into a document that can be used by GraphQL clients.
  */
-export function gql(source: "query GetAllPosts {\n  gates {\n    title\n    price\n    width\n    height\n    reservation\n    images {\n      url\n    }\n  }\n}"): (typeof documents)["query GetAllPosts {\n  gates {\n    title\n    price\n    width\n    height\n    reservation\n    images {\n      url\n    }\n  }\n}"];
+export function gql(source: "query GetAllPosts {\n  gates {\n    title\n    price\n    width\n    height\n    id\n    reservation\n    images {\n      url\n    }\n  }\n}\n\nquery GetPostBySlug($slug: ID!) {\n  gate(where: {id: $slug}) {\n    id\n    title\n    images {\n      id\n      url\n    }\n    description {\n      html\n    }\n  }\n}"): (typeof documents)["query GetAllPosts {\n  gates {\n    title\n    price\n    width\n    height\n    id\n    reservation\n    images {\n      url\n    }\n  }\n}\n\nquery GetPostBySlug($slug: ID!) {\n  gate(where: {id: $slug}) {\n    id\n    title\n    images {\n      id\n      url\n    }\n    description {\n      html\n    }\n  }\n}"];
 
 export function gql(source: string) {
   return (documents as any)[source] ?? {};

@@ -3,7 +3,11 @@ const { redirect } = require("next/dist/server/api-utils");
 /** @type {import('next').NextConfig} */
 const nextConfig = {
 	images: {
-		domains: ["https://fitpage-ten.vercel.app", "media.graphassets.com"],
+		domains: [
+			"https://fitpage-ten.vercel.app",
+			"media.graphassets.com",
+			"eu-west-2.graphassets.com",
+		],
 		formats: ["image/avif", "image/webp"],
 	},
 	async redirects() {

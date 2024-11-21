@@ -4,9 +4,24 @@ query GetAllPosts {
 		price
 		width
 		height
+		id
 		reservation
 		images {
 			url
+		}
+	}
+}
+query GetPostBySlug($slug: ID!) {
+	gate(where: { id: $slug }) {
+		id
+		title
+		images {
+			id
+			url
+		}
+		description {
+			html
+			json
 		}
 	}
 }
