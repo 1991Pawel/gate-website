@@ -1,0 +1,12 @@
+query GetAllPosts {
+	gates {
+		title
+		price
+		width
+		height
+		reservation
+		images {
+			url
+		}
+	}
+}

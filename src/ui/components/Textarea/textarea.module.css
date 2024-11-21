@@ -1,0 +1,16 @@
+.textareaWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+.textareaWrapper label {
+	color: var(--gray-color);
+	font-size: 14px;
+}
+.textareaWrapper textarea {
+	border: 1px solid var(--black-color);
+	border-radius: 15px;
+	min-height: 200px;
+	font-size: 16px;
+	padding: 16px;
+}

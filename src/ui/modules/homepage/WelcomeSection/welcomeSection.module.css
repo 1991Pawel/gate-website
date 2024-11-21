@@ -1,0 +1,67 @@
+.welcome {
+	padding: 32px 0;
+	position: relative;
+}
+.pointer {
+	margin-top: -90px;
+}
+.welcomeContent {
+	display: flex;
+	flex-direction: column;
+	gap: 16px;
+}
+
+.weolcomeInner {
+	display: grid;
+	gap: 16px;
+}
+
+.specialParagraph {
+	font-weight: 600;
+}
+.welcomeContentTitle {
+	font-size: 24px;
+	font-weight: 600;
+	font-style: italic;
+	margin-bottom: 8px;
+	background: linear-gradient(90deg, #ff1501 0%, #ffa001 28.39%);
+	background-clip: text;
+	-webkit-background-clip: text;
+	-webkit-text-fill-color: transparent;
+	text-transform: uppercase;
+}
+
+@media screen and (min-width: 720px) {
+	.weolcomeInner {
+		grid-template-columns: 1fr 1fr;
+		gap: 32px;
+	}
+}
+@media screen and (min-width: 1020px) {
+	.welcomeContentTitle {
+		font-size: 60px;
+	}
+	.weolcomeInner {
+		gap: 64px;
+	}
+	.weolcomeInner p {
+		font-size: 18px;
+	}
+	.welcome {
+		padding: 64px 0;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.welcomeContentTitle {
+		font-size: 96px;
+	}
+	.weolcomeInner {
+		gap: 120px;
+	}
+	.weolcomeInner p {
+		font-size: 20px;
+	}
+	.welcome {
+		padding: 100px 0;
+	}
+}

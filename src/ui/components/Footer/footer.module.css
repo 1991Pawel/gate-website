@@ -1,0 +1,42 @@
+.footer {
+	background: var(--gray-light-color);
+	padding: 12px 0 16px;
+	color: var(--white-color);
+	text-align: center;
+}
+.footer a {
+	transition: ease-in-out 0.3s opacity;
+}
+.footer a:hover {
+	opacity: 0.8;
+}
+
+.footerTitle {
+	font-size: 20px;
+	font-weight: 600;
+	letter-spacing: -1.5px;
+}
+.footerDesc {
+	font-size: 16px;
+	letter-spacing: -1.5px;
+}
+.disclaimer {
+	font-size: 10px;
+	opacity: 0.8;
+}
+
+.term {
+	opacity: 0.8;
+	font-size: 14px;
+}
+
+.listItem {
+	list-style: none;
+}
+.list {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	gap: 16px;
+	margin: 12px 0;
+}

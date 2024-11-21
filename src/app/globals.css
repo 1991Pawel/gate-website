@@ -1,0 +1,90 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+	--primary-color: #ff4c00;
+	--gray-color: #454545;
+	--gray-light-color: #393f4f;
+	--white-color: #ffffff;
+	--black-color: #000;
+	--z-index-header: 1000;
+	--z-index-navigation: 1001;
+	--z-index-navigation-button: 1002;
+	--card-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+	/* --mobile-breakpoint: 720px;
+	--tablet-breakpoint: 1020px;
+	--desktop-breakpoint: 1280px; */
+	scroll-behavior: smooth;
+}
+
+.layout {
+	padding-top: 60px;
+	max-width: 2048px;
+	margin: 0 auto;
+}
+/*
+  1. Use a more-intuitive box-sizing model.
+*/
+*,
+*::before,
+*::after {
+	box-sizing: border-box;
+}
+/*
+	2. Remove default margin
+  */
+* {
+	margin: 0;
+}
+/*
+	Typographic tweaks!
+	3. Add accessible line-height
+	4. Improve text rendering
+  */
+body {
+	line-height: 1.5;
+	-webkit-font-smoothing: antialiased;
+	--tablet-width: 768px;
+	--desktop-width: 1024px;
+}
+/*
+	5. Improve media defaults
+  */
+img,
+picture,
+video,
+canvas,
+svg {
+	display: block;
+	/* max-width: 100%; */
+}
+
+/*
+	6. Remove built-in form typography styles
+  */
+input,
+button,
+textarea,
+select {
+	font: inherit;
+}
+/*
+	7. Avoid text overflows
+  */
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+	overflow-wrap: break-word;
+}
+/*
+	8. Create a root stacking context
+  */
+#root,
+#__next {
+	isolation: isolate;
+}

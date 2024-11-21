@@ -1,0 +1,139 @@
+.intro {
+	/* min-height: 612px; */
+
+	max-width: 1300px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+.introOverlay {
+	background: #fff;
+	z-index: 10000;
+	width: 100%;
+	height: 100vh;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+
+	left: 0;
+	right: 0;
+}
+
+.ctaWrapper {
+	display: flex;
+	flex-direction: column;
+	gap: 10px;
+}
+
+.ctaWrapper button:nth-of-type(2) {
+	display: none;
+}
+.introHeader {
+}
+.introHeaderInner {
+	max-width: 260px;
+	display: flex;
+	flex-direction: column;
+	margin: 0 auto;
+	text-align: center;
+}
+.introTitle {
+	font-size: 32px;
+	font-weight: 600;
+	line-height: 91%;
+	color: var(--primary-color);
+}
+.introDescription {
+	margin-top: 10px;
+	margin-bottom: 16px;
+	font-size: 14px;
+	line-height: 150%;
+}
+.introSpecial {
+	font-weight: 700;
+	font-size: 16px;
+	color: var(--gray-color);
+	margin-bottom: 8px;
+}
+.introImage {
+	margin: 0 auto;
+	width: 70%;
+}
+
+.introImage picture {
+	height: 100%;
+	height: 100%;
+	display: block;
+}
+
+@media screen and (min-width: 720px) {
+	.introTitle {
+		text-align: left;
+		color: var(--black-color);
+	}
+	.introSpecial {
+		text-align: left;
+		color: var(--primary-color);
+	}
+	.introDescription {
+		text-align: left;
+	}
+	.introHeaderInner {
+		max-width: 100%;
+	}
+	.intro {
+		display: flex;
+	}
+	.ctaWrapper button:nth-of-type(2) {
+		display: block;
+	}
+	.introImage {
+		margin: 0 auto;
+		width: 70%;
+		max-width: 410px;
+	}
+}
+@media screen and (min-width: 1020px) {
+	.introTitle {
+		font-size: 60px;
+	}
+	.introSpecial {
+		font-size: 18px;
+	}
+	.introDescription {
+		font-size: 18px;
+		max-width: 400px;
+	}
+
+	.introHeader {
+		align-self: center;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.ctaWrapper {
+		gap: 32px;
+	}
+	.introTitle {
+		font-size: 96px;
+	}
+	.introSpecial {
+		font-size: 24px;
+		margin-bottom: 12px;
+	}
+	.introDescription {
+		font-size: 24px;
+	}
+	.ctaWrapper {
+		flex-direction: row;
+		min-width: 600px;
+		margin-top: 30px;
+	}
+	.introImage {
+		width: 100%;
+		max-width: 470px;
+	}
+}
+@media screen and (min-width: 1600px) {
+	.introImage {
+		max-width: 620px;
+	}
+}

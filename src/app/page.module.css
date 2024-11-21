@@ -1,0 +1,46 @@
+.home {
+	background: url("/assets/home/intro-mobile-gradient.png");
+	background-repeat: no-repeat;
+	background-size: contain;
+	background-position: top right;
+}
+
+@media screen and (min-width: 720px) {
+	.home {
+		background: url("/assets/home/intro-desktop-gradient.png");
+		background-repeat: no-repeat;
+
+		background-position: -50px 0px;
+		background-size: 1225px 1225px;
+	}
+	/* .home {
+		background: url("/assets/home/intro-desktop-gradient.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 250px 50px;
+		background-size: 1655px 1655px;
+	} */
+}
+@media screen and (min-width: 1020px) {
+	.home {
+		background: url("/assets/home/intro-desktop-gradient.png");
+		background-repeat: no-repeat;
+		background-size: contain;
+		background-position: 250px 50px;
+		background-size: 1655px 1655px;
+	}
+}
+@media screen and (min-width: 1280px) {
+	.home {
+		background: url("/assets/home/intro-desktop-gradient.png");
+		background-repeat: no-repeat;
+		background-size: cover;
+		background-position: 260px 0px;
+		background-size: 1655px 1655px;
+	}
+}
+@media screen and (min-width: 1580px) {
+	.home {
+		background-position: 24vw 0px;
+	}
+}
