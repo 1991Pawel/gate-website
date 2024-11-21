@@ -10,7 +10,6 @@ export async function BlogPostsSection() {
 	});
 
 	const gates = data?.gates;
-	const firstImageUrl = gates[0]?.images[0]?.url;
 
 	console.log(data);
 
