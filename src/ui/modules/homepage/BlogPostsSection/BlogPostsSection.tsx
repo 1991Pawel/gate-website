@@ -35,7 +35,7 @@ export async function BlogPostsSection() {
 								)}
 								{offer?.reservation && <div className={style.reservation}>Rezerwacja</div>}
 							</div>
-							<div className="offerListContent">
+							<div>
 								<div className={style.row}>
 									<h3 className={style.offerTitle}>{offer.title}</h3>
 									<p className={style.offerPrice}>Cena: {offer.price} PLN</p>

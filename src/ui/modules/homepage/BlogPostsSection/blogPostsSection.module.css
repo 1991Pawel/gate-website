@@ -228,25 +228,26 @@
 	border-radius: 5px;
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	display: grid;
-	grid-template-columns: 200px 1fr;
+	/* grid-template-columns: 200px 1fr; */
 	gap: 32px;
 }
 
 .offerTitle {
 	font-size: 18px;
-	font-weight: bold;
+
 	margin-bottom: 10px;
 }
 .row {
 	display: flex;
-	align-items: center;
-	justify-content: space-between;
+
+	gap: 16px;
+	flex-direction: column;
 }
 .offerDesc,
 .offerDimensions,
 .offerCondition,
 .offerPrice {
-	font-size: 26px;
+	font-size: 16px;
 	font-weight: 700;
 }
 .reservation {
@@ -274,4 +275,21 @@
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+
+@media screen and (min-width: 720px) {
+	.offerItem {
+		grid-template-columns: 200px 1fr;
+	}
+	.offerPrice {
+		font-size: 26px;
+	}
+	.offerTitle {
+		font-size: 24px;
+	}
+	.row {
+		align-items: center;
+		flex-direction: row;
+		justify-content: space-between;
+	}
 }
