@@ -1,5 +1,3 @@
-import Link from "next/link";
-import Image from "next/image";
 import style from "./blogPostsSection.module.css";
 import cx from "classnames";
 import { Container } from "@/ui/components/Container/Contianer";
@@ -12,7 +10,7 @@ export async function BlogPostsSection() {
 	});
 
 	const gates = data?.gates;
-	const firstImageUrl = gates[0].images[0].url;
+	const firstImageUrl = gates[0]?.images[0]?.url;
 
 	console.log(data);
 
