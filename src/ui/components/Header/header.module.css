@@ -53,7 +53,13 @@
 		height: 80px;
 	}
 	.logoContainer {
-		width: 110px;
-		height: auto;
+		width: 40px;
+		height: 40px;
+	}
+	.phoneLink {
+		padding: 12px 24px;
+	}
+	.logoSlogan {
+		font-size: 26px;
 	}
 }
