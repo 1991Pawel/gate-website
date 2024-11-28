@@ -264,6 +264,10 @@
 
 .imageWrapper {
 	position: relative;
+	height: 200px;
+}
+.imageWrapper img {
+	object-fit: cover;
 	height: 100%;
 	width: 100%;
 }
@@ -275,6 +279,12 @@
 	height: 100%;
 	width: 100%;
 	object-fit: cover;
+}
+.iconWrapper {
+	display: flex;
+	gap: 16px;
+	align-items: center;
+	font-size: 24px;
 }
 
 @media screen and (min-width: 720px) {
@@ -292,4 +302,30 @@
 		flex-direction: row;
 		justify-content: space-between;
 	}
+}
+.bottom {
+	display: flex;
+	flex-flow: column;
+
+	justify-content: space-between;
+}
+
+.phoneLink {
+	display: flex;
+	gap: 4px;
+	align-items: center;
+	font-weight: 700;
+	color: #fff;
+	border-radius: 16px;
+	background-color: #ff7300;
+	font-size: 12px;
+	align-self: center;
+	padding: 8px 16px;
+	width: fit-content;
+	margin-left: auto;
+}
+.bottomRow {
+	display: flex;
+	align-items: center;
+	width: 100%;
 }

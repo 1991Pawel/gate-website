@@ -4,6 +4,8 @@ import { Container } from "@/ui/components/Container/Contianer";
 import { getClient } from "@/lib/client";
 import { type GetAllPostsQuery, GetAllPostsDocument } from "@/gql/graphql";
 import Link from "next/link";
+import Size from "@/ui/svgs/size.svg";
+import PhoneIcon from "@/ui/svgs/phone.svg";
 
 export async function BlogPostsSection() {
 	const { data } = await getClient().query<GetAllPostsQuery>({
@@ -11,11 +13,14 @@ export async function BlogPostsSection() {
 	});
 
 	const gates = data?.gates;
+	const priceFormat = (price: number) => new Intl.NumberFormat("pl-PL").format(price);
 
 	return (
 		<section id="blog" className={style.offersSection}>
 			<Container>
-				<div className={style.offertTitle}>Oferty</div>
+				<br />
+				<br />
+				<div className={style.offertTitle}>Bramy</div>
 				<div className={style.offersList}>
 					{gates.map((offer) => (
 						<Link href={`/brama/${offer.id}`} key={offer.title}>
@@ -35,21 +40,25 @@ export async function BlogPostsSection() {
 									)}
 									{offer?.reservation && <div className={style.reservation}>Rezerwacja</div>}
 								</div>
-								<div>
+								<div className={style.bottom}>
 									<div className={style.row}>
-										<h3 className={style.offerTitle}>{offer.title}</h3>
-										<p className={style.offerPrice}>Cena: {offer.price} PLN</p>
+										<h3 className={style.offerTitle}>{offer?.title}</h3>
+										{offer?.price && (
+											<p className={style.offerPrice}>{priceFormat(offer.price)} zł</p>
+										)}
 									</div>
-
-									{/* {offer?.reservation && <div>Rezerwacja</div>} */}
-									{/* {offer?.width && <div>długość {offer.width} </div>}
-								{offer?.height && <div>wysokość {offer.height} </div>} */}
-									{offer?.width && (
-										<div>
-											{" "}
-											{offer.width} x {offer.height}
+									<div className={style.bottomRow}>
+										{offer?.width && (
+											<div className={style.iconWrapper}>
+												<Size />
+												{offer.width} x {offer.height}
+											</div>
+										)}
+										<div className={style.phoneLink}>
+											<PhoneIcon width="24" height="24" />
+											<a href="tel:+48667098271">Rezerwuj</a>
 										</div>
-									)}
+									</div>
 								</div>
 							</div>
 						</Link>

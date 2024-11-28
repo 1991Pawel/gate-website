@@ -1,4 +1,3 @@
-import { useState } from "react";
 import Link from "next/link";
 import style from "./header.module.css";
 import Logo from "@/ui/svgs/logo.svg";
@@ -11,9 +10,9 @@ export const Header = () => {
 			<Container>
 				<div className={style.headerInner}>
 					<Link title="Strona główna" href="/">
-						<div className={style.logoContainer}>
+						<span className={style.logoContainer}>
 							<Logo />
-						</div>
+						</span>
 						<span className={style.logoSlogan}> bramypodlaskie.pl</span>
 					</Link>
 					<div className={style.phoneLink}>

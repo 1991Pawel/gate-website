@@ -4,7 +4,6 @@ import style from "./navigation.module.css";
 import Logo from "@/ui/svgs/logo.svg";
 
 export const Navigation = ({
-	setOpenNav,
 	isActive,
 }: {
 	isActive: boolean;
