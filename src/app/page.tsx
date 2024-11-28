@@ -3,26 +3,25 @@ import type { Metadata } from "next";
 import { BlogPostsSection } from "@/ui/modules/homepage/BlogPostsSection/BlogPostsSection";
 
 export const metadata: Metadata = {
-	title: "Dawid Ciborowski - Certyfikowany Trener Personalny Białystok",
-	metadataBase: new URL("https://ciborowski-trener.pl"),
+	title: "Bramy Przemysłowe Białystok - Wytrzymałe i Funkcjonalne Bramy dla Firm",
+	metadataBase: new URL("https://bramypodlasie.pl"),
 	themeColor: "#ffffff",
 	alternates: {
-		canonical: "https://ciborowski-trener.pl",
+	  canonical: "https://bramypodlasie.pl",
 	},
 	verification: {
-		google: "ii-RoACLWzJ8MDPoGy-j1q6CpnUZDjMkvp8UO2nueag",
+	  google: "ii-RoACLWzJ8MDPoGy-j1q6CpnUZDjMkvp8UO2nueag", // (Ensure to update this with your actual Google verification code)
 	},
 	openGraph: {
-		url: "https://ciborowski-trener.pl",
-		title: "Dawid Ciborowski - Certyfikowany Trener Personalny Białystok",
-		description:
-			"Osiągnij swoje fitness cele z doświadczonym trenerem personalnym w Białymstoku. Specjalizuję się w treningach siłowych, planowaniu diet i wspieram w dążeniu do zdrowego stylu życia. Skontaktuj się ze mną już dziś i rozpocznij transformację swojego ciała i zdrowia!",
-		images: "/og-image.jpg",
+	  url: "https://bramypodlasie.pl",
+	  title: "Bramy Przemysłowe Białystok - Wytrzymałe i Funkcjonalne Bramy dla Firm",
+	  description:
+		"Oferujemy bramy przemysłowe w Białymstoku, zapewniające niezawodność i bezpieczeństwo w obiektach przemysłowych, magazynach oraz firmach. Nasze bramy charakteryzują się wysoką jakością wykonania, funkcjonalnością i trwałością. Sprawdź naszą ofertę i skontaktuj się z nami, aby dopasować bramę do Twoich potrzeb.",
+	  images: "/og-image.jpg", // (Ensure you add a suitable image for Open Graph)
 	},
-
 	description:
-		"Nazywam się Dawid. Jestem certyfikowanym trenerem personalnym z Białegostoku. Nie zależnie od wieku płci czy kondycji zapraszam Cię na wspólne treningi indywidualne. Razem możemy więcej!",
-};
+	  "Bramy Podlasie specjalizuje się w produkcji i montażu bram przemysłowych w Białymstoku. Nasze bramy zapewniają bezpieczeństwo, funkcjonalność i efektywność w obiektach przemysłowych. Wykonujemy bramy dostosowane do indywidualnych potrzeb każdej firmy, zapewniając długowieczność i niezawodność naszych produktów.",
+  };
 export const revalidate = 1;
 
 export default function Home() {
