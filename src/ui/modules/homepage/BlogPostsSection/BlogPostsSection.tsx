@@ -1,10 +1,9 @@
 import style from "./blogPostsSection.module.css";
 
-import { Container } from "@/ui/components/Container/Contianer";
 import { getClient } from "@/lib/client";
 import { type GetAllPostsQuery, GetAllPostsDocument } from "@/gql/graphql";
 
-import PropertyCard from "@/ui/components/PropertyCard/PropertyCard";
+import PropertyCategires from "@/ui/components/PropetryCategories/PropertyCategires";
 
 export async function BlogPostsSection() {
 	const { data } = await getClient().query<GetAllPostsQuery>({
@@ -15,16 +14,11 @@ export async function BlogPostsSection() {
 
 	return (
 		<section id="blog" className={style.offersSection}>
-			<Container>
-				<br />
-				<br />
-				<div className={style.offertTitle}>Bramy</div>
+			<div className={style.offersWrapper}>
 				<div className={style.offersList}>
-					{gates.map((offer) => (
-						<PropertyCard key={offer.title} offer={offer} />
-					))}
+					<PropertyCategires offers={gates} />
 				</div>
-			</Container>
+			</div>
 		</section>
 	);
 }

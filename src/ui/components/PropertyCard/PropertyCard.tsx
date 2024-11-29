@@ -1,8 +1,9 @@
 "use client";
 import { useRouter } from "next/navigation";
+
 import style from "./PropertyCard.module.css";
 import Size from "@/ui/svgs/size.svg";
-import PhoneIcon from "@/ui/svgs/phone.svg";
+import cx from "classnames";
 import { type GetAllPostsQuery } from "@/gql/graphql";
 
 type Gate = GetAllPostsQuery["gates"][0];
@@ -11,7 +12,6 @@ interface PropertyCardProps {
 	offer: Gate;
 }
 
-import cx from "classnames";
 const PropertyCard = ({ offer }: PropertyCardProps) => {
 	const router = useRouter();
 	const priceFormat = (price: number) => new Intl.NumberFormat("pl-PL").format(price);
@@ -29,7 +29,7 @@ const PropertyCard = ({ offer }: PropertyCardProps) => {
 				<div className={style.bottom}>
 					<div className={style.row}>
 						<h3 className={style.offerTitle}>{offer?.title}</h3>
-						{offer?.price && <p className={style.offerPrice}>{priceFormat(offer.price)} zł</p>}
+						{/* {offer?.price && <p className={style.offerPrice}>{priceFormat(offer.price)} zł</p>} */}
 					</div>
 					<div className={style.bottomRow}>
 						{offer?.width && (
@@ -38,12 +38,13 @@ const PropertyCard = ({ offer }: PropertyCardProps) => {
 								{offer.width} x {offer.height}
 							</div>
 						)}
-						{!offer?.reservation && (
+						{offer?.price && <p className={style.offerPrice}>{priceFormat(offer.price)} zł</p>}
+						{/* {!offer?.reservation && (
 							<div onClick={(e) => e.stopPropagation()} className={style.phoneLink}>
 								<PhoneIcon width="24" height="24" />
 								<a href="tel:+48667098271">Rezerwuj</a>
 							</div>
-						)}
+						)} */}
 					</div>
 				</div>
 			</div>

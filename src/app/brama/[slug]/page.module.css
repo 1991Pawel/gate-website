@@ -1,0 +1,26 @@
+.backLink {
+	position: sticky;
+	height: 30px;
+	width: 100%;
+	top: 60px;
+	background: #fff;
+}
+
+.itemsContainer {
+	width: 100%;
+	max-width: 1260px;
+}
+
+.images {
+	/* max-width: 500px; */
+	display: flex;
+	flex-direction: column;
+	padding-bottom: 40px;
+	max-width: 800px;
+}
+
+@media screen and (min-width: 720px) {
+	.backLink {
+		top: 80px;
+	}
+}

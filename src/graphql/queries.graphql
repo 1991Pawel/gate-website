@@ -1,10 +1,11 @@
 query GetAllPosts {
-	gates {
+	gates(orderBy: updatedAt_DESC) {
 		title
 		price
 		width
 		height
 		id
+		category
 		reservation
 		images {
 			url
@@ -21,7 +22,6 @@ query GetPostBySlug($slug: ID!) {
 		}
 		description {
 			html
-			json
 		}
 	}
 }

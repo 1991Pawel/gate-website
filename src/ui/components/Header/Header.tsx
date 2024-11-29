@@ -13,7 +13,7 @@ export const Header = () => {
 						<span className={style.logoContainer}>
 							<Logo />
 						</span>
-						<span className={style.logoSlogan}> bramypodlaskie.pl</span>
+						<span className={style.logoSlogan}> Bramypodlasie.pl</span>
 					</Link>
 					<div className={style.phoneLink}>
 						<PhoneIcon width="24" height="24" />

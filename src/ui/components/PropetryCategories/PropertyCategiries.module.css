@@ -1,0 +1,43 @@
+.buttons {
+	display: flex;
+	gap: 16px;
+	padding: 10px 0;
+	height: 60px;
+	position: sticky;
+	top: 60px;
+	z-index: 10;
+	background: #fff;
+}
+
+.containerOffers {
+	position: relative;
+}
+
+.button {
+	padding: 10px;
+	background: #ccc;
+	text-transform: uppercase;
+	font-weight: 700;
+	border-radius: 16px;
+	font-size: 12px;
+	width: 100%;
+}
+.buttonActive {
+	background: #000;
+	color: #fff;
+}
+
+.offersList {
+	display: grid;
+	margin-top: 24px;
+	gap: 20px;
+}
+
+@media screen and (min-width: 720px) {
+	.buttons {
+		top: 80px;
+	}
+	.offersList {
+		margin-top: 80px;
+	}
+}

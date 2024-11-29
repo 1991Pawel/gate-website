@@ -223,9 +223,8 @@
 
 .offerItem {
 	background-color: #fff;
-	padding: 15px;
-	border: 1px solid #ddd;
-	border-radius: 5px;
+	padding: 12px;
+
 	box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 	display: grid;
 	/* grid-template-columns: 200px 1fr; */
@@ -247,8 +246,9 @@
 .offerDimensions,
 .offerCondition,
 .offerPrice {
-	font-size: 16px;
+	font-size: 18px;
 	font-weight: 700;
+	margin-left: auto;
 }
 .reservation {
 	position: absolute;
@@ -265,6 +265,10 @@
 .imageWrapper {
 	position: relative;
 	height: 200px;
+	margin-left: -12px;
+	margin-top: -12px;
+	margin-right: -12px;
+	margin-bottom: -12px;
 }
 .imageWrapper img {
 	object-fit: cover;
@@ -296,6 +300,8 @@
 	}
 	.offerTitle {
 		font-size: 24px;
+	}
+	.offerImage {
 	}
 	.row {
 		align-items: center;
