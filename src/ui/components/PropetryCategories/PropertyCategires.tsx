@@ -13,7 +13,7 @@ interface PropertyCardProps {
 
 const CATEGORIES = {
 	GATES: "bramy",
-	ENGINE: "silniki",
+	ENGINE: "Części",
 };
 
 const PropertyCategires = ({ offers }: PropertyCardProps) => {
