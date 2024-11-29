@@ -24,6 +24,16 @@ const PropertyCategires = ({ offers }: PropertyCardProps) => {
 	const other = offers.filter((offer) => offer.category !== CATEGORIES.GATES);
 	const filteredOffers = activeCategory === CATEGORIES.GATES ? gates : other;
 
+	const sortedOffers = (items: Gate[]): Gate[] => {
+		return items.sort((a: Gate, b: Gate) => {
+			if (a.reservation && !b.reservation) return 1;
+			if (!a.reservation && b.reservation) return -1;
+			return 0;
+		});
+	};
+
+	const offersToDisplay = sortedOffers(filteredOffers);
+
 	return (
 		<div className={style.containerOffers}>
 			<div className={style.buttons}>
@@ -38,7 +48,7 @@ const PropertyCategires = ({ offers }: PropertyCardProps) => {
 				))}
 			</div>
 			<div className={style.offersList}>
-				{filteredOffers.map((offer) => (
+				{offersToDisplay.map((offer) => (
 					<PropertyCard key={offer.title} offer={offer} />
 				))}
 			</div>
