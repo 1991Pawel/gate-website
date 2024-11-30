@@ -17,9 +17,7 @@ const CATEGORIES = {
 };
 
 const PropertyCategires = ({ offers }: PropertyCardProps) => {
-	const [activeCategory, setActiveCategory] = useState(
-		() => sessionStorage.getItem("activeCategory") || CATEGORIES.GATES,
-	);
+	const [activeCategory, setActiveCategory] = useState(CATEGORIES.GATES);
 	const categories = Object.values(CATEGORIES);
 
 	const gates = offers.filter((offer) => offer.category === CATEGORIES.GATES);
@@ -37,7 +35,12 @@ const PropertyCategires = ({ offers }: PropertyCardProps) => {
 	const offersToDisplay = sortedOffers(filteredOffers);
 
 	useEffect(() => {
-		sessionStorage.setItem("activeCategory", activeCategory);
+		const storedCategory = sessionStorage?.getItem("activeCategory");
+		if (storedCategory) {
+			setActiveCategory(storedCategory);
+		}
+	}, []);
+	useEffect(() => {
 		window.scrollTo(0, 0);
 	}, [setActiveCategory, activeCategory]);
 
