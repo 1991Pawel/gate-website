@@ -48,8 +48,8 @@ const PropertyCategires = ({ offers }: PropertyCardProps) => {
 				))}
 			</div>
 			<div className={style.offersList}>
-				{offersToDisplay.map((offer) => (
-					<PropertyCard key={offer.title} offer={offer} />
+				{offersToDisplay.map((offer, i) => (
+					<PropertyCard key={i} offer={offer} />
 				))}
 			</div>
 		</div>
