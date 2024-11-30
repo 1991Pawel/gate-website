@@ -1,8 +1,9 @@
 import { getClient } from "@/lib/client";
 import { type GetPostBySlugQuery, GetPostBySlugDocument } from "@/gql/graphql";
-import Link from "next/link";
 import BackArrow from "@/ui/svgs/back-arrow.svg";
 import style from "./page.module.css";
+import { BackButton } from "@/ui/components/BackButton/BackButton";
+
 export const revalidate = 0;
 export default async function BlogPost({ params }: { params: { slug: string } }) {
 	const { data } = await getClient().query<GetPostBySlugQuery>({
@@ -21,12 +22,7 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 	return (
 		<main className="  flex min-h-screen flex-col items-center justify-between bg-white p-4">
 			<div className={style.itemsContainer}>
-				<div className={style.backLink}>
-					<Link className="mt-10 flex gap-2" href="/">
-						<BackArrow className="h-6 w-6 rotate-180" />
-						Wróć
-					</Link>
-				</div>
+				<BackButton />
 				<br />
 				<h1 className=" text-4xl font-semibold text-dark">{title}</h1>
 

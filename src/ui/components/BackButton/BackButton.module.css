@@ -1,0 +1,12 @@
+.backLink {
+	position: sticky;
+	height: 30px;
+	width: 100%;
+	top: 60px;
+	background: #fff;
+}
+@media screen and (min-width: 720px) {
+	.backLink {
+		top: 80px;
+	}
+}
