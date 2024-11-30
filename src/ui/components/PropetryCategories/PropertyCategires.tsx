@@ -1,6 +1,6 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import style from "./PropertyCategiries.module.css";
 import cx from "classnames";
 import { type GetAllPostsQuery } from "@/gql/graphql";
@@ -17,7 +17,9 @@ const CATEGORIES = {
 };
 
 const PropertyCategires = ({ offers }: PropertyCardProps) => {
-	const [activeCategory, setActiveCategory] = useState(CATEGORIES.GATES);
+	const [activeCategory, setActiveCategory] = useState(
+		() => sessionStorage.getItem("activeCategory") || CATEGORIES.GATES,
+	);
 	const categories = Object.values(CATEGORIES);
 
 	const gates = offers.filter((offer) => offer.category === CATEGORIES.GATES);
@@ -33,6 +35,11 @@ const PropertyCategires = ({ offers }: PropertyCardProps) => {
 	};
 
 	const offersToDisplay = sortedOffers(filteredOffers);
+
+	useEffect(() => {
+		sessionStorage.setItem("activeCategory", activeCategory);
+		window.scrollTo(0, 0);
+	}, [setActiveCategory, activeCategory]);
 
 	return (
 		<div className={style.containerOffers}>
