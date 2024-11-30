@@ -1,5 +1,5 @@
 query GetAllPosts {
-	gates(orderBy: updatedAt_DESC) {
+	gates(orderBy: updatedAt_DESC, first: 100) {
 		title
 		price
 		width
