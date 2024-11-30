@@ -1,6 +1,6 @@
 import { getClient } from "@/lib/client";
 import { type GetPostBySlugQuery, GetPostBySlugDocument } from "@/gql/graphql";
-import BackArrow from "@/ui/svgs/back-arrow.svg";
+
 import style from "./page.module.css";
 import { BackButton } from "@/ui/components/BackButton/BackButton";
 
@@ -17,7 +17,6 @@ export default async function BlogPost({ params }: { params: { slug: string } })
 
 	const render = data.gate?.description;
 	const title = data.gate?.title;
-	console.log(render);
 
 	return (
 		<main className="  flex min-h-screen flex-col items-center justify-between bg-white p-4">
