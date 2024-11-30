@@ -2,7 +2,7 @@
 	background: var(--gray-light-color);
 	padding: 12px 0 16px;
 	color: var(--white-color);
-	text-align: center;
+	text-align: left;
 }
 .footer a {
 	transition: ease-in-out 0.3s opacity;
@@ -12,13 +12,14 @@
 }
 
 .footerTitle {
-	font-size: 20px;
+	font-size: 18px;
 	font-weight: 600;
-	letter-spacing: -1.5px;
+	/* letter-spacing: 1px; */
+	color: #ff7300;
+	/* letter-spacing: -1.5px; */
 }
 .footerDesc {
-	font-size: 16px;
-	letter-spacing: -1.5px;
+	font-size: 14px;
 }
 .disclaimer {
 	font-size: 10px;
@@ -39,4 +40,14 @@
 	align-items: center;
 	gap: 16px;
 	margin: 12px 0;
+}
+
+@media screen and (min-width: 720px) {
+	.footerDesc {
+		font-size: 16px;
+	}
+	.footerTitle {
+		font-size: 24px;
+		font-weight: 600;
+	}
 }

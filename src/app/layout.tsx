@@ -5,6 +5,7 @@ import Script from "next/script";
 import { Montserrat } from "next/font/google";
 import { ApolloWrapper } from "@/lib/apollo-wrapper";
 import { Header } from "@/ui/components/Header/Header";
+import { Footer } from "@/ui/components/Footer/Footer";
 
 const openSans = Montserrat({
 	subsets: ["latin"],
@@ -35,7 +36,7 @@ export default function RootLayout({ children }: { children: React.ReactNode }) 
 				<div className="layout">
 					<Header />
 					<ApolloWrapper>{children}</ApolloWrapper>
-					{/* <Footer /> */}
+					<Footer />
 				</div>
 			</body>
 		</html>
